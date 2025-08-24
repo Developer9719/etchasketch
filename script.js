@@ -26,19 +26,3 @@ function clearArt() {
         div.style.backgroundColor = '';
     });
 }
-
-// Resize Grid
-function resizeGrid() {
-    const newSize = prompt("Enter new grid size (e.g. 16 for 16x16):");
-    if (newSize && !isNaN(newSize)) {
-        // Clear existing grid
-        sketchContainer.innerHTML = '';
-        // Create new grid
-        for (let i = 0; i < newSize * newSize; i++) {
-            const sketchDiv = document.createElement('div');
-            sketchDiv.classList.add('sketch-div');
-            sketchContainer.appendChild(sketchDiv);
-        }
-    }
-    draw();
-}
